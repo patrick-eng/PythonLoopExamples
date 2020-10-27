@@ -23,7 +23,7 @@ print("\n-------")
 
 # 1. Some basic loop examples 
 
-# Make a short list of numbers
+# Make a short array of numbers
 numbers = [1, 2, 3, 4, 5]
 
 # loop to print them
