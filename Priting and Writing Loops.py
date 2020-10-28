@@ -79,16 +79,27 @@ for i in words:
 # Note 2: Don't forget that python elements start at 0
    
     
-# 6. Set up the loop to write the conversation to a text file. Remember we need to define 
-# that we are writing to the file using the "w" option.    
+# 6. Set up the loop to write the conversation into a little story, stored in a text file.
+# Remember we need to define that we are writing to the file using the "w" option.    
+    
+# Bring the file into existence
 file = open("WhatShallWeDo.txt", "w")    
+
+# Write the openning lines of the story
+file.write("Mark and Harriet come across a whole load of abandoned stuff on one of their classic post-apocalyptic adventures. But what will they do with it all? Mark starts the conversation.")
+
+# Leave some space for the loop
+file.write("\n \n")
 
 for i in words:
     selection = random.choice(options)
     position = options.index(selection)
     file.write("Mark: What shall we do with all the " + i + "?\n")
-    file.write("Harriet: " + selection + "\n")
-    file.write("(By the way, the selection was element " + str(position) + " in the options list) \n")
-    file.write("-----\n")
+    file.write("Harriet: We should " + selection + ".\n")
+    file.write("\n")
 
+# Conclude the story
+file.write("And so, it was done. The end.")
+
+# Close the file - Python will now store it in your working directory
 file.close()
